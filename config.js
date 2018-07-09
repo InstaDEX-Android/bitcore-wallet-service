@@ -40,7 +40,7 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://explorer.instadex.io',
+      url: 'http://localhost:3001',
       apiPrefix: '/instadex-insight-api'
     },
     testnet: {
