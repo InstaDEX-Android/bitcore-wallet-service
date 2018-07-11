@@ -2,11 +2,9 @@ var config = {
   basePath: '/bws/api',
   disableLogs: false,
   port: 3232,
-
   // Uncomment to make BWS a forking server
   // cluster: true,
-
-  // Uncomment to set the number or process (will use the nr of availalbe CPUs by default)
+  // Uncomment to use the nr of availalbe CPUs
   // clusterInstances: 4,
 
   // https: true,
@@ -40,14 +38,12 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'http://localhost:3001',
-      apiPrefix: '/instadex-insight-api'
+      url: 'https://insight.dev.instadex.io:443',
     },
     testnet: {
       provider: 'insight',
-      url: 'https://explorer-testnet.instadex.io',
-      //url: 'http://localhost:3001',
-      apiPrefix: '/instadex-insight-api'
+      url: 'https://test-insight.dev.instadex.io:443',
+      // url: 'http://localhost:3001',
       // Multiple servers (in priority order)
       // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
     },
@@ -55,10 +51,9 @@ var config = {
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'part',
+    defaultUnit: 'btc',
     subjectPrefix: '',
-    pushServerUrl: 'https://fcm.googleapis.com/fcm',
-    authorizationKey: '',
+    pushServerUrl: 'http://localhost:8000',
   },
   fiatRateServiceOpts: {
     defaultProvider: 'BitPay',
@@ -86,5 +81,6 @@ var config = {
   //  api_user: xxx,
   //  api_key: xxx,
   // });
+
 };
 module.exports = config;

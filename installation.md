@@ -77,7 +77,7 @@ An example of this configuration is:
     },
     testnet: {
       provider: 'insight',
-      url: 'https://test-insight.bitpay.com:443',
+      url: 'https://test-insight.dev.instadex.io:443',
     },
   }
 ```
